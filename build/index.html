@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>Colony</title>
+  </head>
+
+  <body>
+    <div class="row">
+      <div id="dashboard" class="col-sm-6">
+
+        <h1> Colony </h1>
+
+        <button id="add" class="dashboardBtn">Add bacteria</button>
+        <button id="feed" class="dashboardBtn">Feed bacteria</button>
+        <button id="split" class="nohover" disabled>Split Scoby</button>
+
+        <p id="numBacteria">Bacteria count: 0</p>
+        <p id="incrementCounter">Bacteria per second: 0</p>
+
+      </div>
+
+      <div id="notifications">
+        <h3> Notifications </h3>
+        <div id="alerts">
+          <li>So... You've decided to start a kombucha business...</li>
+        </div>
+      </div>
+    </div>
+
+
+    <button id="save">Save</button>
+
+    <img id="bb" src="booch_boys.gif" alt="Booch Boys">
+
+    <script type="text/javascript" src="bundle.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+  </body>
+
+</html>

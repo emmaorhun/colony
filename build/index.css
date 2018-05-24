@@ -1,0 +1,73 @@
+
+body {
+  font-size: 120%;
+  background-color: #D3F5F7;
+  padding: 5%;
+  background-image: url('scenery.jpg');
+  height: 100%;
+
+  background-size: cover;
+}
+
+button {
+  border-radius: 8px;
+  padding: 0.5%;
+  border: 2px solid #4CAF50;
+  color: #4CAF50;
+  transition-duration: 0.4s;
+  box-shadow: 0 2px #CED1CD;
+}
+
+button:disabled {
+  border: 2px solid #CED1CD;
+  color: #CED1CD;
+}
+
+button:not(.nohover):hover{
+  background-color: #4CAF50;
+  color: white;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+button:active { box-shadow: 0 1px #CED1CD; transform: translateY(4px); }
+button:focus {outline:0;}
+
+#save {
+  margin-top: 10px;
+  color: #FFBD24;
+  border: 2px solid #FFBD24;
+}
+
+#save:hover {
+  background-color: #FFBD24;
+  color: white;
+}
+
+#notifications {
+  width: 40%;
+  height: 350px;
+  max-height: 350px;
+  padding: 30px 40px;
+  margin-left: 2%;
+  background-color: white;
+  border-radius: 25px;
+  overflow-y: auto;
+}
+
+#dashboard{
+  border-radius: 25px;
+  padding: 5%;
+  background-color: white;
+}
+
+#bb {
+  width: 30%;
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+}
