@@ -2,7 +2,17 @@
 let bacteria = 0;
 let increment = 0;
 let clickRate = 1000;
+let scobyCount = 1;
 let interval;
+
+class Scoby {
+  constructor(bacteria, size){
+    this.bacteria = bacteria;
+    this.size = size;
+  }
+}
+
+let scoby = new Scoby(1000,2);
 
 window.onload = function(){
   console.log("Loading game...");
@@ -34,6 +44,11 @@ function updateIncrementCount(){
   e.innerHTML = `Bacteria per second: ${increment}`;
 }
 
+function updateScobyCount(){
+  let e = document.getElementById('numScoby');
+  e.innerHTML = `Scoby count: ${scobyCount}`;
+}
+
 function addNotification(text){
   let alerts = document.getElementById('alerts');
   let div = document.createElement("li");
@@ -48,6 +63,9 @@ function updateButtons(){
   if(bacteria > 100){
     document.getElementById("split").disabled = false;
     document.getElementById("split").classList.remove("nohover");
+  } else {
+    document.getElementById("split").disabled = true;
+    document.getElementById("split").classList.add("nohover");
   }
 }
 
@@ -85,6 +103,8 @@ export function restart(){
 
 document.getElementById("split").onclick = function(){
   increment *= 2;
+  scobyCount++;
+  updateScobyCount();
   updateIncrementCount();
 }
 
