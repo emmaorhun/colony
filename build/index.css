@@ -23,6 +23,7 @@ button:disabled {
   color: #CED1CD;
 }
 
+
 button:not(.nohover):hover{
   background-color: #4CAF50;
   color: white;
@@ -46,7 +47,7 @@ button:focus {outline:0;}
 #notifications {
   width: 40%;
   height: 350px;
-  max-height: 350px;
+  max-height: 290px;
   padding: 30px 40px;
   margin-left: 2%;
   background-color: white;
@@ -58,6 +59,35 @@ button:focus {outline:0;}
   border-radius: 25px;
   padding: 5%;
   background-color: white;
+}
+
+#robo {
+  visibility: hidden;
+  width: 15%;
+
+  position: fixed;
+  bottom: 4%;
+  left: 33%;
+
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+
+}
+
+#tobi {
+  visibility: hidden;
+
+  width: 28%;
+
+  position: fixed;
+  bottom: 1%;
+  right: 23%;
+
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+
 }
 
 #bb {
