@@ -36,9 +36,9 @@ window.onload = function() {
 
 // Updates information on page after info has been reloaded
 function updateBoosters() {
-  document.getElementById('stand').innerHTML = `Stand x${customers[0].count} <br> Next at: ${customers[0].milestone*((2*customers[0].count)+1)} bacteria`;
-  document.getElementById('local').innerHTML = `Corner store x${customers[1].count} <br> Next at: ${customers[1].milestone*((2*customers[1].count)+1)} bacteria`;
-  document.getElementById('shopify').innerHTML = `Shopify office x${customers[2].count} <br> Next at: ${customers[2].milestone*((2*customers[2].count)+1)} bacteria`;
+  document.getElementById('stand').innerHTML = `Stand x${customers[0].count} <br> Next at: ${customers[0].milestone * ((2 * customers[0].count) + 1)} bacteria`;
+  document.getElementById('local').innerHTML = `Corner store x${customers[1].count} <br> Next at: ${customers[1].milestone * ((2 * customers[1].count) + 1)} bacteria`;
+  document.getElementById('shopify').innerHTML = `Shopify office x${customers[2].count} <br> Next at: ${customers[2].milestone * ((2 * customers[2].count) + 1)} bacteria`;
 
   if (kombubotAcquired) {
     document.getElementById('robo').style.visibility = 'visible';
@@ -125,7 +125,7 @@ function updateSplitButton() {
 // Enables and disables button for each customer booster depending on variants
 function updateCustomerButtons() {
   for (let i = 0; i < customers.length; i++) {
-    if (bacteria > (customers[i].milestone*((2*customers[i].count)+1))) {
+    if (bacteria > (customers[i].milestone * ((2 * customers[i].count) + 1))) {
       document.getElementById(customers[i].id).disabled = false;
       document.getElementById(customers[i].id).classList.remove('nohover');
     } else {
@@ -244,7 +244,7 @@ document.getElementById('botton').onclick = function() {
 document.getElementById('stand').onclick = function() {
   customers[0].count++;
   bacteria -= customers[0].milestone;
-  document.getElementById('stand').innerHTML = `Stand x${customers[0].count} <br> Next at:  ${customers[0].milestone*((2*customers[0].count)+1)} bacteria`;
+  document.getElementById('stand').innerHTML = `Stand x${customers[0].count} <br> Next at:  ${customers[0].milestone * ((2 * customers[0].count) + 1)} bacteria`;
 
   // Adds notification the first time button is clicked
   if (customers[0].count === 1) {
@@ -257,7 +257,7 @@ document.getElementById('stand').onclick = function() {
 document.getElementById('local').onclick = function() {
   customers[1].count++;
   bacteria -= customers[1].milestone;
-  document.getElementById('local').innerHTML = `Corner store x${customers[1].count} <br> Next at:  ${customers[1].milestone*((2*customers[1].count)+1)} bacteria`;
+  document.getElementById('local').innerHTML = `Corner store x${customers[1].count} <br> Next at:  ${customers[1].milestone * ((2 * customers[1].count) + 1)} bacteria`;
 
   // Picks random corner store each time to display in notification box
   const store = cornerStores[Math.floor(Math.random() * cornerStores.length)];
@@ -268,7 +268,7 @@ document.getElementById('local').onclick = function() {
 document.getElementById('shopify').onclick = function() {
   document.getElementById('tobi').style.visibility = 'visible';
   customers[2].count++;
-  document.getElementById('shopify').innerHTML = `Shopify office x${customers[2].count} <br> Next at:  ${customers[2].milestone*((2*customers[2].count)+1)} bacteria`;
+  document.getElementById('shopify').innerHTML = `Shopify office x${customers[2].count} <br> Next at:  ${customers[2].milestone * ((2 * customers[2].count) + 1)} bacteria`;
 
   // Only occurs first time user is able to click the button
   if (customers[2].count === 1) {
