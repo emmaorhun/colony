@@ -33,7 +33,7 @@ button:not(.nohover):hover{
 button:active { box-shadow: 0 1px #CED1CD; transform: translateY(4px); }
 button:focus {outline:0;}
 
-#save {
+.menu {
   margin-top: 10px;
   color: #FFBD24;
   border: 2px solid #FFBD24;
@@ -41,7 +41,10 @@ button:focus {outline:0;}
 
 #save:hover {
   background-color: #FFBD24;
-  color: white;
+}
+
+#restart:hover {
+  background-color: #FFBD24;
 }
 
 #notifications {
