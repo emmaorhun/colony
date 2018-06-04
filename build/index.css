@@ -1,6 +1,6 @@
 
 body {
-  font-size: 120%;
+  font-size: 100%;
   background-color: #D3F5F7;
   padding: 5%;
   background-image: url('scenery.jpg');
@@ -10,12 +10,14 @@ body {
 }
 
 button {
+  font-size: 100%;
   border-radius: 8px;
   padding: 0.5%;
   border: 2px solid #4CAF50;
   color: #4CAF50;
   transition-duration: 0.4s;
   box-shadow: 0 2px #CED1CD;
+  margin: 5px;
 }
 
 button:disabled {
@@ -60,7 +62,7 @@ button:focus {outline:0;}
 
 #dashboard{
   border-radius: 25px;
-  padding: 5%;
+  padding: 3%;
   background-color: white;
 }
 
